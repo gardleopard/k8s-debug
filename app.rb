@@ -13,3 +13,7 @@ get '/health' do
   'OK'
 end
 
+get '/dynamic/:part' do
+  content_type :json
+  {:url_part => params[:part]}.to_json
+end
