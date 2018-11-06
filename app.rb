@@ -6,6 +6,8 @@ get '/' do
   content_type :json
   response.headers["CUSTOM_HEADER_ONE"] = "HEADER_ONE"
   response.headers["CUSTOM_HEADER_TWO"] = "HEADER_TWO"
+  response.headers["CUSTOM_HEADER_THREE"] = "HEADER_THREE"
+
   request.env.to_json
 end
 
